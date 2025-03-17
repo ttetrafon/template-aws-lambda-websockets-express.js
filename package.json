@@ -1,0 +1,19 @@
+{
+  "name": "template-aws-lambda-websockets-express.js",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "local-compose-run": "docker compose -f docker-compose.yaml up --force-recreate --build -d",
+    "local-compose-down": "docker compose -f docker-compose.yaml down",
+    "local-compose-start": "docker compose -f docker-compose.yaml start",
+    "local-compose-stop": "docker compose -f docker-compose.yaml stop",
+    "sam-run": "sam local start-api --env-vars env.json",
+    "sam-build": "sam build",
+    "test-connection-lambda": "sam local invoke ConnectionHandlerFunction --event tests/events/connect.json"
+  },
+  "dependencies": {
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.758.0",
+    "@aws-sdk/client-dynamodb": "^3.767.0"
+  },
+  "license": "MIT"
+}

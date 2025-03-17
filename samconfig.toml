@@ -1,0 +1,6 @@
+version = 0.1
+[default.build.parameters]
+template_file = "c:\\Users\\ttetr\\OneDrive\\Projects\\template-aws-lambda-websockets-express.js\\template.yaml"
+cached = true
+parallel = true
+use_container = true
